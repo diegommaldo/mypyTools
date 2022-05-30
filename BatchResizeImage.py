@@ -17,12 +17,13 @@ import os.path
 from PIL import Image
 
 # Choose Folder Path
-f = "Path Here"
+f = "file path"
 
 for file in os.listdir(f):
+    supportedFiles = ('.jpg', '.jpeg', '.png')
 
     # Search for Images on folder
-    if file.endswith(('.jpg', '.jpeg', '.png')):
+    if file.endswith(supportedFiles):
         f_img = f+"/"+file
         print("#")
         print(file)
@@ -35,7 +36,7 @@ for file in os.listdir(f):
         print('original size', srcW, "×", srcH)
         
         # Reducing Factor
-        factor = 0.5
+        factor = 0.25
         
         # Calculate new size
         resW = round(srcW * factor) 
@@ -49,6 +50,12 @@ for file in os.listdir(f):
             )
         newS.save(f_img)
         print('resized to', resW, "×", resH)
+
+    # Alert for script's not supported files
+    else:
+        print("#")
+        print("!!! ", file, " !!!" )
+        print("not supported file")
 
 print()    
 print('Done')
