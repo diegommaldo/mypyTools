@@ -15,10 +15,10 @@ from pathlib import Path
 import os
 
 
-#select file in Folder
+#select the file in Folder
 filePath = "In Path"
 
-#select file out folder
+#select the out folder
 outFolder = "Out Path"
 
 
