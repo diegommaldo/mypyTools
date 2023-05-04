@@ -2,7 +2,7 @@ import os
 import csv
 
 # table with headers > column 1 "oldname", column 2 "newname"
-# don't forget to add extension at the "newname"
+# don't forget to add extension at the "newname" column files
 
 csvFile = 'file.csv'
 
